@@ -9,7 +9,7 @@
 <body>
     <div class="formcontainer">
         <h1>SIGN UP!</h1>
-        <form d="myform">
+        <form id="myform">
             <label>Fullname</label><br>
             <input type ='text' name = 'fullname' placeholder="Enter fullname" 
             required
@@ -19,7 +19,7 @@
             <label>Phone Number</label><br>
             <input type ='text' name = 'phoneno' placeholder="Enter phone number"
             required
-            pattern="[789] [0-9]{9}"><br>
+            pattern="[789][0-9]{9}"><br>
             <!-- the reggular expression is first digit should be either 7 or 8 or 9 then the rest of the 9 digits can be between 0-9 -->
             
             <label>Email ID</label><br>
@@ -32,16 +32,18 @@
             <input type ='password' name = 'password' placeholder="Enter password"
             required
             pattern = '(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'
-            title = 'password must constain atleast 6 digits with 1 uppsercase, 1 lowercase, 1 digit'><br>
+            title = 'password must constain atleast 6 digits with 1 uppsercase, 1 lowercase, 1 digit'
+            id="mypassword"><br>
             
             <label>Confirm Password</label><br>
             <input type ='password' name = 'confirmpassword' placeholder="Confirm password"
             required
             pattern = '(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'
-            title = "password must constain atleast 6 digits with 1 uppsercase, 1 lowercase, 1 digit"><br>
+            title = "password must constain atleast 6 digits with 1 uppsercase, 1 lowercase, 1 digit"
+            id="confirmpassword"><br>
             
             <input type = submit value = REGISTER id = 'register'><br>
-            <div class="hurryup"> Hurry Up!</div>
+            <div class="hurryup" id ='hurryup'> Hurry Up!</div>
         </form>
         <script src="app.js"></script>
     </div>
